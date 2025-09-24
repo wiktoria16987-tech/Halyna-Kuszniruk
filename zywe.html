@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Пам'яті Галини Кушнірук | Живі Історії</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #FBF9F6;
+            color: #383838;
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23d4af37' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+        h1, h2, h3, h4 {
+            font-family: 'Cormorant Garamond', serif;
+            letter-spacing: 0.05em;
+        }
+        .text-gold {
+            color: #B9975B;
+        }
+        .bg-gold {
+            background-color: #B9975B;
+        }
+        .bg-gold:hover {
+            background-color: #A9874B;
+        }
+        .border-gold {
+            border-color: #B9975B;
+        }
+        .ring-gold {
+            --tw-ring-color: #B9975B;
+        }
+        .ring-gold:focus {
+            --tw-ring-color: #B9975B;
+        }
+        .card {
+            background-color: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            border-radius: 12px;
+        }
+        .ornament-divider {
+            height: 30px;
+            width: 150px;
+            background-image: url("data:image/svg+xml,%3Csvg width='150' height='20' viewBox='0 0 150 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0,10 Q15,5 30,10 T60,10' stroke='%23B9975B' stroke-width='1' fill='none'/%3E%3Cpath d='M150,10 Q135,5 120,10 T90,10' stroke='%23B9975B' stroke-width='1' fill='none'/%3E%3Ccircle cx='75' cy='10' r='4' fill='none' stroke='%23B9975B' stroke-width='1'/%3E%3Cpath d='M75,10 C 80,5 85,5 90,10' stroke='%23B9975B' fill='none'/%3E%3Cpath d='M75,10 C 70,5 65,5 60,10' stroke='%23B9975B' fill='none'/%3E%3Cpath d='M75,10 C 80,15 85,15 90,10' stroke='%23B9975B' fill='none'/%3E%3Cpath d='M75,10 C 70,15 65,15 60,10' stroke='%23B9975B' fill='none'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        /* Стилі для горизонтального скролу */
+        .scroll-container {
+            position: relative;
+        }
+        .scroll-container::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            width: 50px;
+            background: linear-gradient(to right, transparent, #FBF9F6);
+            pointer-events: none;
+        }
+        .scroll-wrapper {
+            scrollbar-width: none; /* Firefox */
+        }
+        .scroll-wrapper::-webkit-scrollbar {
+            display: none; /* Safari and Chrome */
+        }
+        .modal {
+            transition: opacity 0.3s ease;
+        }
+        /* Custom audio player styles */
+        audio {
+            width: 100%;
+            border-radius: 50px;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Заголовок -->
+    <header class="sticky top-0 z-40 bg-white/80 backdrop-blur-md shadow-sm">
+        <div class="container mx-auto px-6 py-4 text-center">
+            <h4 class="text-xl font-semibold tracking-widest uppercase text-gray-600">Живі Історії</h4>
+        </div>
+    </header>
+
+    <main class="container mx-auto p-4 md:p-8 max-w-4xl">
+
+        <!-- Головна секція - Профіль -->
+        <section id="profil" class="text-center my-12">
+            <div class="text-gold mb-6">
+                <svg class="w-16 h-16 mx-auto" viewBox="0 0 64 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M32 4V76" stroke="currentColor" stroke-width="3"></path>
+                    <path d="M16 16H48" stroke="currentColor" stroke-width="3"></path>
+                    <path d="M8 36H56" stroke="currentColor" stroke-width="3"></path>
+                    <path d="M12 64L52 56" stroke="currentColor" stroke-width="3"></path>
+                    <circle cx="32" cy="4" r="4" fill="currentColor"></circle>
+                    <circle cx="16" cy="16" r="4" fill="currentColor"></circle>
+                    <circle cx="48" cy="16" r="4" fill="currentColor"></circle>
+                    <circle cx="8" cy="36" r="4" fill="currentColor"></circle>
+                    <circle cx="56" cy="36" r="4" fill="currentColor"></circle>
+                    <circle cx="32" cy="76" r="4" fill="currentColor"></circle>
+                </svg>
+            </div>
+            <div class="relative inline-block mb-6">
+                <img src="./wesele3.jpg" 
+                      
+                     class="w-48 h-48 md:w-56 md:h-56 rounded-full object-cover mx-auto ring-4 ring-offset-4 ring-offset-FBF9F6 ring-gold shadow-xl">
+            </div>
+            <h1 class="text-5xl md:text-6xl font-bold text-gray-800">Галина Кушнірук</h1>
+            <p class="text-lg text-gray-500 mt-2 font-light">01.1941 – 28.01.2025</p>
+            <div class="ornament-divider mx-auto my-8"></div>
+            <blockquote class="max-w-2xl mx-auto px-4">
+                <p class="text-xl italic text-gray-700 leading-relaxed">"А тепер залишаються віра, надія, любов, – оці три. А найбільша між ними – любов!"</p>
+                <cite class="block text-right mt-3 text-gray-500 not-italic">— 1-е до Коринтян 13:13</cite>
+            </blockquote>
+        </section>
+        
+        <!-- Молитва -->
+        <section class="card p-6 md:p-8 my-12">
+             <h3 class="text-3xl font-bold text-center mb-6 text-gold">Молитва за душу покійної</h3>
+             <div class="text-center text-lg italic text-gray-800 leading-loose">
+                <p>Вічная пам'ять, блаженний спокій подай, Господи, приснопам'ятній рабі Твоїй Галині, і сотвори їй вічную пам'ять.</p>
+             </div>
+        </section>
+
+        <!-- Біографія -->
+        <section id="biografia" class="my-12">
+            <h2 class="text-4xl font-bold text-gray-800 mb-2 text-center">Історія Життя</h2>
+            <div class="ornament-divider mx-auto mb-6"></div>
+            <div class="card p-6 md:p-8">
+                <div class="space-y-5 text-lg text-gray-700 leading-loose">
+                    <p>Історія Галини розпочалася в мальовничій Андрушівці в Україні, де її серце з наймолодших літ билося в ритмі любові до Бога та родини. У віці лише 17 років, з надією в очах, вона вийшла заміж за Миколу Кушнірука, з яким розділяла мрії та створила дім, повний тепла для їхніх чотирьох дітей.</p>
+                    <p>Проте доля випробувала її силу. Коли Микола помер у віці 34 років, Галина залишилася сама, зіткнувшись із величезним викликом. Вона не здалася. З непохитною рішучістю, за підтримки своєї мами Тетяни, она важко працювала в шкільній їдальні, щоб забезпечити дітей усім найкращим. Її руки, хоч і натруджені, завжди були готові допомогти, а її серце — відкрите для кожного.</p>
+                    <p>Навіть коли у віці 65 років їй довелося зіткнутися з онкологічною хворобою, її дух залишився незламним. Протягом багатьох років вона боролася з гідністю та мужністю, які надихали всіх навколо. Вона була опорою — завжди можна було розраховувати на її підтримку, мудру пораду, а насамперед на її тиху, але могутню молитву.</p>
+                    <p>Її найбільшою гордістю та радістю були онуки та правнуки, які її обожнювали. Для них вона була скарбницею оповідань, уособленням безумовної любові та тепла. Вона залишила по собі спадщину сильної віри, незламного характеру та любові, яка назавжди залишиться в серцях тих, хто її знав.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Галерея Спогадів -->
+        <section id="galeria" class="my-12">
+            <h2 class="text-4xl font-bold text-gray-800 mb-2 text-center">Галерея Спогадів</h2>
+            <div class="ornament-divider mx-auto mb-6"></div>
+            <div class="scroll-container card p-4 md:p-6">
+                <div class="scroll-wrapper overflow-x-auto py-2">
+                    <div id="gallery-inner" class="flex space-x-4">
+                        <!-- Фото додаються динамічно через JS -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Мапа Життя -->
+        <section id="mapa" class="my-12">
+            <h2 class="text-4xl font-bold text-gray-800 mb-2 text-center">Мапа Важливих Місць</h2>
+            <div class="ornament-divider mx-auto mb-6"></div>
+            <div class="card p-6 md:p-8 text-center">
+                 <i class="fas fa-map-marked-alt text-gold text-7xl"></i>
+                 <p class="font-semibold text-3xl mt-4">Андрушівка, Україна</p>
+                 <p class="text-gray-500 text-lg">Місце народження, кохання та сімейного життя.</p>
+            </div>
+        </section>
+
+        <!-- Книга Спогадів -->
+        <section id="kondolencje" class="my-12">
+            <h2 class="text-4xl font-bold text-gray-800 mb-2 text-center">Книга Спогадів</h2>
+            <div class="ornament-divider mx-auto mb-6"></div>
+            <div class="card p-6 md:p-8">
+                <div id="wpisy-list" class="mb-8 space-y-6">
+                    <!-- Istniejace wpisy -->
+                     <div class="border-b border-gold/20 pb-4">
+                        <p class="text-gray-700 italic text-lg">"Найулюбленіша Бабуся, чиї розповіді та тепло назавжди залишаться в моїй пам'яті. Дякую за все."</p>
+                        <p class="text-right font-medium text-sm text-gray-500 mt-2">- Твоя онука, Аня</p>
+                    </div>
+                     <div class="border-b border-gold/20 pb-4">
+                        <p class="text-gray-700 italic text-lg">"Пам'ятаю її силу та віру. Вона була для нас усіх прикладом. Спочивай з миром."</p>
+                        <p class="text-right font-medium text-sm text-gray-500 mt-2">- Друг сім'ї, Ян</p>
+                    </div>
+                </div>
+                <h3 class="text-3xl font-bold text-gray-800 mb-4 pt-6 border-t border-gold/20">Залиште свій спогад</h3>
+                <form id="kondolencje-form" class="space-y-4">
+                    <div>
+                        <input type="text" id="imie" name="imie" placeholder="Ваше ім'я" class="w-full p-3 bg-white/50 border border-gold/30 rounded-lg focus:outline-none ring-gold focus:ring-2 transition" required>
+                    </div>
+                    <div>
+                        <textarea id="wpis" name="wpis" rows="4" placeholder="Ваш спогад..." class="w-full p-3 bg-white/50 border border-gold/30 rounded-lg focus:outline-none ring-gold focus:ring-2 transition" required></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-gold text-white font-bold py-3 px-8 rounded-lg text-lg tracking-wider hover:shadow-lg transition-all transform hover:scale-105">Додати запис</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Молитовник -->
+        <section id="modlitewnik" class="my-12">
+            <h2 class="text-4xl font-bold text-gray-800 mb-2 text-center">Молитовник</h2>
+            <div class="ornament-divider mx-auto mb-6"></div>
+            <div class="card p-6 md:p-8 space-y-8">
+                <!-- Audio Player -->
+                <div>
+                    <h3 class="text-3xl font-bold text-center mb-4 text-gold">Молитва голосом</h3>
+                    <div class="flex items-center justify-center p-4 bg-white/50 rounded-lg border border-gold/30">
+                        <audio controls>
+                            <source src="./ElevenLabs_2025-09-24T12_54_01_Kira_pvc_sp81_s34_sb75_v3.mp3" type="audio/mpeg">
+                            Ваш браузер не підтримує аудіо елемент.
+                        </audio>
+                    </div>
+                </div>
+                
+                <!-- Prayer Gallery -->
+                <div class="scroll-container pt-4">
+                    <div class="scroll-wrapper overflow-x-auto py-2">
+                        <div class="flex space-x-4">
+                            <!-- Молитва 1 -->
+                            <div class="bg-white/80 p-6 rounded-lg shadow-md w-80 h-96 flex-shrink-0 flex flex-col">
+                                <h4 class="text-2xl font-bold text-gold mb-4 text-center">Отче Наш</h4>
+                                <div class="text-gray-700 leading-relaxed overflow-y-auto">
+                                    <p>Отче наш, що єси на небесах, нехай святиться ім’я Твоє, нехай прийде Царство Твоє, нехай буде воля Твоя, як на небі, так і на землі. Хліб наш насущний дай нам сьогодні; і прости нам провини наші, як і ми прощаємо винуватцям нашим; і не введи нас у спокусу, але визволи нас від лукавого. Бо Твоє є Царство, і сила, і слава, на віки вічні. Амінь.</p>
+                                </div>
+                            </div>
+                            <!-- Молитва 2 -->
+                            <div class="bg-white/80 p-6 rounded-lg shadow-md w-80 h-96 flex-shrink-0 flex flex-col">
+                                <h4 class="text-2xl font-bold text-gold mb-4 text-center">Богородице Діво</h4>
+                                <div class="text-gray-700 leading-relaxed overflow-y-auto">
+                                    <p>Богородице Діво, радуйся, Благодатна Маріє, Господь з Тобою. Благословенна Ти в жонах, і благословен плід лона Твого, бо Ти породила Христа Спаса, Ізбавителя душ наших. Достойно є воістину величати блаженною Тебе, Богородицю, присноблаженну, і пренепорочну, і Матір Бога нашого. Чеснішу від Херувимів, і незрівнянно славнішу від Серафимів, що без зотління Бога Слово породила, сущу Богородицю, Тебе величаємо.</p>
+                                </div>
+                            </div>
+                            <!-- Молитва 3 -->
+                            <div class="bg-white/80 p-6 rounded-lg shadow-md w-80 h-96 flex-shrink-0 flex flex-col">
+                                <h4 class="text-2xl font-bold text-gold mb-4 text-center">Молитва за померлих</h4>
+                                <div class="text-gray-700 leading-relaxed overflow-y-auto">
+                                    <p>Упокой, Господи, душу спочилої раби Твоєї Галини, і прости їй всі прогрішення її, вільні й невільні, даруючи їй Царство Небесне і причастя вічних Твоїх благ, і Твого нескінченного і блаженного життя насолоду. Бо Ти єси воскресіння, життя і спокій спочилих рабів Твоїх, Христе Боже наш, і Тобі славу возсилаємо, з безначальним Твоїм Отцем, і пресвятим, і благим, і животворящим Твоїм Духом, нині і повсякчас, і на віки віків. Амінь.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    
+    <!-- Модальне вікно для галереї -->
+    <div id="gallery-modal" class="modal fixed inset-0 bg-black/80 flex items-center justify-center p-4 z-50 opacity-0 pointer-events-none">
+        <div class="bg-white rounded-lg max-w-3xl max-h-full w-full p-4 relative shadow-2xl">
+            <button id="close-modal" class="absolute -top-4 -right-4 bg-white rounded-full h-10 w-10 text-2xl flex items-center justify-center text-black">&times;</button>
+            <img id="modal-img" src="" alt="Збільшене фото зі спогадів" class="w-full h-auto max-h-[70vh] object-contain mb-4 rounded">
+            <p id="modal-caption" class="text-center text-gray-700 text-lg"></p>
+        </div>
+    </div>
+
+    <footer class="bg-[#383838] text-white mt-12">
+        <div class="container mx-auto px-4 py-8 text-center text-sm">
+             <div class="ornament-divider mx-auto my-4 opacity-30" style="filter: invert(1);"></div>
+            <p>&copy; 2025 Живі Історії. Створено з любов'ю та повагою.</p>
+        </div>
+    </footer>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const galleryContainer = document.getElementById('gallery-inner');
+        const modal = document.getElementById('gallery-modal');
+        const modalImg = document.getElementById('modal-img');
+        const modalCaption = document.getElementById('modal-caption');
+        const closeModal = document.getElementById('close-modal');
+
+        const photos = [
+            { src: 'wesele.jpg', caption: 'День весілля з Миколою – початок спільного шляху.' },
+            { src: './516c3624-47c2-428f-89a1-ad578ce2be34.jpeg',caption: 'Часи молодості, сповнені мрій та надій.' },
+            
+            { src: './711064cc-3553-4f56-b1ec-47c7e9be4db8.jpeg', caption: 'Завжди оточена любов\'ю своїх дітей.' },
+            { src: './4cdb1f8a-e06d-4029-9e7a-5e2d50e8a724.jpeg', caption: 'Найбільша радість – хвилини, проведені з онуками.' },
+            { src: './f9a0e95e-27bb-4f04-855d-7fdb6d263063.jpeg', caption: 'Її усмішка, що освітлювала кожен день.' },
+           { src: './e8bf7aae-87d7-4f9b-8201-559050833a80.jpeg', caption: 'День весілля з Миколою – початок спільного шляху.' },
+            { src: './d18ff1af-4eca-4790-813b-8572200866c5.jpeg', caption: 'Хвилина відпочинку в улюбленому саду.' },
+            { src: './c8007da2-2286-4150-b5e1-5da90831966b.jpeg', caption: 'Чарівний час свят, проведених у родинному колі.' },
+            { src: 'https://placehold.co/400x400/FBF9F6/383838?text=Віра', caption: 'Завжди сильна вірою та молитвою.' },
+            { src: 'https://placehold.co/400x400/FBF9F6/383838?text=Спогад+9', caption: 'Спогад 9' },
+            { src: 'https://placehold.co/400x400/FBF9F6/383838?text=Спогад+10', caption: 'Спогад 10' },
+            { src: 'https://placehold.co/400x400/FBF9F6/383838?text=Спогад+11', caption: 'Спогад 11' },
+            { src: 'https://placehold.co/400x400/FBF9F6/383838?text=Спогад+12', caption: 'Спогад 12' },
+            { src: 'https://placehold.co/400x400/FBF9F6/383838?text=Спогад+13', caption: 'Спогад 13' },
+            { src: 'https://placehold.co/400x400/FBF9F6/383838?text=Спогад+14', caption: 'Спогад 14' },
+            { src: 'https://placehold.co/400x400/FBF9F6/383838?text=Спогад+15', caption: 'Спогад 15' },
+            { src: 'https://placehold.co/400x400/FBF9F6/383838?text=Спогад+16', caption: 'Спогад 16' },
+            { src: 'https://placehold.co/400x400/FBF9F6/383838?text=Спогад+17', caption: 'Спогад 17' },
+            { src: 'https://placehold.co/400x400/FBF9F6/383838?text=Спогад+18', caption: 'Спогад 18' },
+            { src: 'https://placehold.co/400x400/FBF9F6/383838?text=Спогад+19', caption: 'Спогад 19' },
+            { src: 'https://placehold.co/400x400/FBF9F6/383838?text=Спогад+20', caption: 'Спогад 20' },
+            { src: 'https://placehold.co/400x400/FBF9F6/383838?text=Спогад+21', caption: 'Спогад 21' },
+            { src: 'https://placehold.co/400x400/FBF9F6/383838?text=Спогад+22', caption: 'Спогад 22' },
+            { src: 'https://placehold.co/400x400/FBF9F6/383838?text=Спогад+23', caption: 'Спогад 23' },
+            { src: 'https://placehold.co/400x400/FBF9F6/383838?text=Спогад+24', caption: 'Спогад 24' },
+            { src: 'https://placehold.co/400x400/FBF9F6/383838?text=Спогад+25', caption: 'Спогад 25' },
+            { src: 'https://placehold.co/400x400/FBF9F6/383838?text=Спогад+26', caption: 'Спогад 26' },
+            { src: 'https://placehold.co/400x400/FBF9F6/383838?text=Спогад+27', caption: 'Спогад 27' },
+            { src: 'https://placehold.co/400x400/FBF9F6/383838?text=Спогад+28', caption: 'Спогад 28' },
+            { src: 'https://placehold.co/400x400/FBF9F6/383838?text=Спогад+29', caption: 'Спогад 29' },
+            { src: 'https://placehold.co/400x400/FBF9F6/383838?text=Спогад+30', caption: 'Спогад 30' },
+            { src: 'https://placehold.co/400x400/FBF9F6/383838?text=Спогад+31', caption: 'Спогад 31' },
+            { src: 'https://placehold.co/400x400/FBF9F6/383838?text=Спогад+32', caption: 'Спогад 32' },
+            { src: 'https://placehold.co/400x400/FBF9F6/383838?text=Спогад+33', caption: 'Спогад 33' },
+            { src: 'https://placehold.co/400x400/FBF9F6/383838?text=Спогад+34', caption: 'Спогад 34' },
+            { src: 'https://placehold.co/400x400/FBF9F6/383838?text=Спогад+35', caption: 'Спогад 35' },
+            { src: 'https://placehold.co/400x400/FBF9F6/383838?text=Спогад+36', caption: 'Спогад 36' },
+            { src: 'https://placehold.co/400x400/FBF9F6/383838?text=Спогад+37', caption: 'Спогад 37' },
+            { src: 'https://placehold.co/400x400/FBF9F6/383838?text=Спогад+38', caption: 'Спогад 38' },
+            { src: 'https://placehold.co/400x400/FBF9F6/383838?text=Спогад+39', caption: 'Спогад 39' },
+            { src: 'https://placehold.co/400x400/FBF9F6/383838?text=Спогад+40', caption: 'Спогад 40' },
+            { src: 'https://placehold.co/400x400/FBF9F6/383838?text=Спогад+41', caption: 'Спогад 41' },
+            { src: 'https://placehold.co/400x400/FBF9F6/383838?text=Спогад+42', caption: 'Спогад 42' },
+            { src: 'https://placehold.co/400x400/FBF9F6/383838?text=Спогад+43', caption: 'Спогад 43' },
+            { src: 'https://placehold.co/400x400/FBF9F6/383838?text=Спогад+44', caption: 'Спогад 44' },
+            { src: 'https://placehold.co/400x400/FBF9F6/383838?text=Спогад+45', caption: 'Спогад 45' },
+            { src: 'https://placehold.co/400x400/FBF9F6/383838?text=Спогад+46', caption: 'Спогад 46' },
+            { src: 'https://placehold.co/400x400/FBF9F6/383838?text=Спогад+47', caption: 'Спогад 47' },
+            { src: 'https://placehold.co/400x400/FBF9F6/383838?text=Спогад+48', caption: 'Спогад 48' },
+            { src: 'https://placehold.co/400x400/FBF9F6/383838?text=Спогад+49', caption: 'Спогад 49' },
+            { src: 'https://placehold.co/400x400/FBF9F6/383838?text=Спогад+50', caption: 'Спогад 50' }
+        ];
+
+        photos.forEach(photo => {
+            const photoEl = document.createElement('div');
+            photoEl.classList.add(
+                'cursor-pointer', 'overflow-hidden', 'rounded-lg', 'shadow-md', 
+                'hover:shadow-xl', 'transition-all', 'transform', 'hover:scale-105', 'w-40', 'h-40', 
+                'md:w-48', 'md:h-48', 'flex-shrink-0'
+            );
+            photoEl.innerHTML = `<img src="${photo.src}" alt="${photo.caption}" class="w-full h-full object-cover">`;
+            photoEl.addEventListener('click', () => {
+                modalImg.src = photo.src;
+                modalCaption.textContent = photo.caption;
+                modal.classList.remove('opacity-0', 'pointer-events-none');
+            });
+            galleryContainer.appendChild(photoEl);
+        });
+
+        closeModal.addEventListener('click', () => {
+            modal.classList.add('opacity-0', 'pointer-events-none');
+        });
+
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                 modal.classList.add('opacity-0', 'pointer-events-none');
+            }
+        });
+
+        const form = document.getElementById('kondolencje-form');
+        const wpisyList = document.getElementById('wpisy-list');
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const imie = e.target.imie.value;
+            const wpis = e.target.wpis.value;
+
+            const newEntry = document.createElement('div');
+            newEntry.classList.add('border-b', 'border-gold/20', 'pb-4');
+            newEntry.innerHTML = `
+                <p class="text-gray-700 italic text-lg">"${wpis}"</p>
+                <p class="text-right font-medium text-sm text-gray-500 mt-2">- ${imie}</p>
+            `;
+            wpisyList.appendChild(newEntry);
+            form.reset();
+        });
+    });
+    </script>
+</body>
+</html>
+
